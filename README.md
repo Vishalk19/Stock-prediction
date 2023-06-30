@@ -19,8 +19,6 @@ I truly hope you find this project informative and useful in developing your own
 *This is only a guide on the usage of the model. If you want to delve into the reasoning behind the model and the theory, please check out my blog: [Engineer Quant](https://medium.com/engineer-quant)*
 
 ## Contents
-- [Contents](#contents)
-- [Overview](#overview)
 - [Quickstart](#quickstart)
 - [Bar Sampling](#bar-sampling)
 - [Feature Engineering](#feature-engineering)
@@ -28,22 +26,9 @@ I truly hope you find this project informative and useful in developing your own
 - [Neural Network Model](#neural-network-model)
 - [Random Forest Model](#random-forest-model)
 - [Results](#results)
-- [Online Learning](#online-learning)
-- [What next?](#what-next?)
-- [Contributing](#contributing)
 
-## Overview
 
-Those who have done some form of machine learning would know that the workflow follows this format: acquire data, preprocess, train, test, monitor model. However, given the complexity of this task, the workflow has been modified to the following:
 
-1. Acquire the tick data - this is the primary data for our model.
-2. Preprocess the data - we need to sample the data using some method. Subsequently, we make the train-test splits.
-3. Train the stacked autoencoder - this will give us our feature extractor.
-4. Process the data - this will give us the *features* of our model, along with train, test datasets.
-5. Use the neural network/random forest to learn from the training data.
-6. Test the model with the testing set - this gives us a gauge of how good our model is.
-
-Now let me elaborate the various parts of the pipeline.
 
 ## Quickstart
 
@@ -127,16 +112,4 @@ Dollar bars:
 ```
 
 
-## Online Learning
 
-The training normally stops after the model has trained on historic data and merely predicts future data. However, I believe that it might be a waste of data if the model does not also learn from the predictions. This is done by training the model on the new (prediction, actual) pairs to continually improve the model. 
-
-## What's next?
-
-The beauty of this model is the once the construction is understood, the individual models can be swapped out for the best model there is. So over time the actual models used here will be different but the core framework will still be the same. I am also working on improving the current model with ideas from Advanced in Financial Machine Learning, such as adding sample weights, cross-validation and ensemble techniques. 
-
-## Contributing
-
-I am always grateful for feedback and modifications that would help! 
-
-Hope you have enjoyed that! To see more content like this, please visit: [Engineer Quant](https://medium.com/engineer-quant)
