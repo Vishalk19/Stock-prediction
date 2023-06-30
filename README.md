@@ -9,14 +9,6 @@ The workflow is similar to the approach in the excellent text Advances in Financ
 
 In essense, we will be making bars (tick, volume or dollar) based on the tick data, apply feature engineering, reduce the dimensions using an **autoencoder** and finally use a machine learing model to make predictions. I have implemented both a **LSTM** regression model and a **Random Forest** classification model to classify the direction of the move. 
 
-This model is not meant to be used to live trade without modifications. However, an extended version of this model can very well be profitable with the right strategies. 
-
-I truly hope you find this project informative and useful in developing your own trading strategies or machine learning models.
-
-*This project illustrates how to use machine learning to predict the future prices of stocks. In order to efficiently allocate the capital to those stocks, check out [OptimalPortfolio](https://github.com/VivekPa/OptimalPortfolio)*
-
-*Disclaimer, this is purely an educational project. Any backtesting performance do not guarentee live trading results. Trade at your own risk.*
-*This is only a guide on the usage of the model. If you want to delve into the reasoning behind the model and the theory, please check out my blog: [Engineer Quant](https://medium.com/engineer-quant)*
 
 ## Contents
 - [Quickstart](#quickstart)
